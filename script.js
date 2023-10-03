@@ -5,12 +5,11 @@ function loadXMLDoc() {
   // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      var JSONDoc = JSON.parse(xhttp.responseText);
-      console.log(JSONDoc);
-      var cityName = JSONDoc.location.name;
-      var temp = JSONDoc.current.temp_c;
-      var weather = JSONDoc.current.condition.text;
-      var kph = JSONDoc.current.wind_kph;
+      let JSONDoc = JSON.parse(xhttp.responseText);
+      let cityName = JSONDoc.location.name;
+      let temp = JSONDoc.current.temp_c;
+      let weather = JSONDoc.current.condition.text;
+      let kph = JSONDoc.current.wind_kph;
       const weatherInfo = "Location: " + cityName + "<br/>" + "Temperature: " +  temp + "°C<br/>" + "Description: " + weather + "<br/>Wind Speed: " + kph + " km/h";
       const icon = JSONDoc.current.condition.icon;
       const alt = "weather Icon";
@@ -20,10 +19,10 @@ function loadXMLDoc() {
       weatherInfoContainer.innerHTML = weatherInfo;
 
 
-      var cityName1 = JSONDoc.location.name;
-      var temp1 = JSONDoc.forecast.forecastday[0].hour[7].temp_c;
-      var weather1 = JSONDoc.forecast.forecastday[0].hour[7].condition.text;
-      var kph1 = JSONDoc.forecast.forecastday[0].hour[7].wind_kph;
+      let cityName1 = JSONDoc.location.name;
+      let temp1 = JSONDoc.forecast.forecastday[0].hour[7].temp_c;
+      let weather1 = JSONDoc.forecast.forecastday[0].hour[7].condition.text;
+      let kph1 = JSONDoc.forecast.forecastday[0].hour[7].wind_kph;
       const weatherInfo1 = "Location: " + cityName1 + "<br/>" + "Temperature: " +  temp1 + "°C<br/>" + "Description: " + weather1 + "<br/>Wind Speed: " + kph1 + " km/h";
 
       const icon1 = JSONDoc.forecast.forecastday[0].hour[7].condition.icon;
@@ -34,10 +33,10 @@ function loadXMLDoc() {
       weatherInfoContainer1.innerHTML = weatherInfo1;
 
 
-      var cityName2 = JSONDoc.location.name;
-      var temp2 = JSONDoc.forecast.forecastday[0].hour[19].temp_c;
-      var weather2 = JSONDoc.forecast.forecastday[0].hour[19].condition.text;
-      var kph2 = JSONDoc.forecast.forecastday[0].hour[19].wind_kph;
+      let cityName2 = JSONDoc.location.name;
+      let temp2 = JSONDoc.forecast.forecastday[0].hour[19].temp_c;
+      let weather2 = JSONDoc.forecast.forecastday[0].hour[19].condition.text;
+      let kph2 = JSONDoc.forecast.forecastday[0].hour[19].wind_kph;
       const weatherInfo2 = "Location: " + cityName2 + "<br/>" + "Temperature: " +  temp2 + "°C<br/>" + "Description: " + weather2 + "<br/>Wind Speed: " + kph2 + " km/h";
 
       const icon2 = JSONDoc.forecast.forecastday[0].hour[19].condition.icon;
