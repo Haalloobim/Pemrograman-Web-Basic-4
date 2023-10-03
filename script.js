@@ -30,6 +30,19 @@ function loadXMLDoc() {
       image1.src = icon1; image1.alt = alt1;
       const weatherInfoContainer1 = document.getElementById("weatherContainer1");
       weatherInfoContainer1.innerHTML = weatherInfo1;
+
+
+      var cityName2 = JSONDoc.location.name;
+      var temp2 = JSONDoc.forecast.forecastday[0].hour[19].temp_c;
+      var weather2 = JSONDoc.forecast.forecastday[0].hour[19].condition.text;
+      const weatherInfo2 = "Location: " + cityName2 + "<br/>" + "Temperature: " +  temp2 + "°C<br/>" + "Description: " + weather2;
+
+      const icon2 = JSONDoc.forecast.forecastday[0].hour[19].condition.icon;
+      const alt2 = "weather Icon";
+      let image2 = document.getElementById("icon2");
+      image2.src = icon2; image2.alt = alt2;
+      const weatherInfoContainer2 = document.getElementById("weatherContainer2");
+      weatherInfoContainer2.innerHTML = weatherInfo2;
     }
   };
   xhttp.open("GET", url, true);
