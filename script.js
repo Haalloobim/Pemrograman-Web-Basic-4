@@ -10,7 +10,7 @@ function loadXMLDoc() {
       let temp = JSONDoc.current.temp_c;
       let weather = JSONDoc.current.condition.text;
       let kph = JSONDoc.current.wind_kph;
-      const weatherInfo = "Location: " + cityName + "<br/>" + "Temperature: " +  temp + "°C<br/>" + "Description: " + weather + "<br/>Wind Speed: " + kph + " km/h";
+      const weatherInfo = `Location: ${cityName}<br/>Temperature: ${temp}°C<br/>Description: ${weather}<br/>Wind Speed: ${kph} km/h`;
       const icon = JSONDoc.current.condition.icon;
       const alt = "weather Icon";
       let image = document.getElementById("icon");
